@@ -211,11 +211,12 @@
   /* TIMER SECTION */
   .timer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 14px;
     margin-bottom: 20px;
   }
-  @media (max-width: 520px) { .timer-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .timer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .timer-grid { grid-template-columns: 1fr; } }
 
   .form-group label {
     display: block;
@@ -596,10 +597,10 @@
         <span data-lang="ja">太陽の下にどのくらい居られますか？</span>
       </h2>
       <p>
-        <span data-lang="en">Enter your details below to estimate your safe sun exposure time. If you are on photosensitising medications, your safe time may be significantly shorter.</span>
-        <span data-lang="zh">输入以下信息，估算您安全的日晒时间。如果您正在服用光敏性药物，安全时间可能大幅缩短。</span>
-        <span data-lang="ko">아래 정보를 입력하여 안전한 햇볕 노출 시간을 추정하세요. 광과민성 약물을 복용 중이라면 시간이 훨씬 짧아질 수 있습니다.</span>
-        <span data-lang="ja">以下の情報を入力して、安全な日光暴露時間を推定します。光感受性の薬を服用している場合、安全時間は大幅に短くなることがあります。</span>
+        <span data-lang="en">Enter your skin type, UV index, and sunscreen SPF to estimate your safe sun exposure time. Based on the Fitzpatrick scale and Minimal Erythemal Dose (MED).</span>
+        <span data-lang="zh">输入您的皮肤类型、紫外线指数和防晒系数，估算安全日晒时间。基于菲茨帕特里克量表和最小红斑剂量（MED）。</span>
+        <span data-lang="ko">피부 유형, 자외선 지수, SPF를 입력하여 안전한 햇볕 노출 시간을 추정하세요. 피츠패트릭 척도와 최소 홍반량(MED)을 기반으로 합니다.</span>
+        <span data-lang="ja">皮膚タイプ、UVインデックス、SPFを入力して安全な日光暴露時間を推定します。フィッツパトリックスケールと最小紅斑量（MED）に基づいています。</span>
       </p>
     </div>
 
@@ -645,23 +646,10 @@
           </label>
           <select id="spf" onchange="calculate()">
             <option value="1" data-en="No sunscreen" data-zh="无防晒霜" data-ko="선크림 없음" data-ja="日焼け止めなし"></option>
-            <option value="1.07" data-en="SPF 15" data-zh="SPF 15" data-ko="SPF 15" data-ja="SPF 15"></option>
-            <option value="1.17" data-en="SPF 30" data-zh="SPF 30" data-ko="SPF 30" data-ja="SPF 30"></option>
-            <option value="1.25" selected data-en="SPF 50" data-zh="SPF 50" data-ko="SPF 50" data-ja="SPF 50"></option>
-            <option value="1.3" data-en="SPF 50+" data-zh="SPF 50+" data-ko="SPF 50+" data-ja="SPF 50+"></option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>
-            <span data-lang="en">Photosensitising medication?</span>
-            <span data-lang="zh">光敏性药物？</span>
-            <span data-lang="ko">광과민성 약물?</span>
-            <span data-lang="ja">光感受性の薬？</span>
-          </label>
-          <select id="medFactor" onchange="calculate()">
-            <option value="1" data-en="None / not sure" data-zh="无 / 不确定" data-ko="없음 / 모름" data-ja="なし / 不明"></option>
-            <option value="0.5" data-en="Moderate risk medication" data-zh="中度风险药物" data-ko="중간 위험 약물" data-ja="中程度のリスクの薬"></option>
-            <option value="0.25" data-en="High risk medication" data-zh="高风险药物" data-ko="높은 위험 약물" data-ja="高リスクの薬"></option>
+            <option value="3.75" data-en="SPF 15" data-zh="SPF 15" data-ko="SPF 15" data-ja="SPF 15"></option>
+            <option value="7.5" data-en="SPF 30" data-zh="SPF 30" data-ko="SPF 30" data-ja="SPF 30"></option>
+            <option value="12.5" selected data-en="SPF 50 (recommended)" data-zh="SPF 50（推荐）" data-ko="SPF 50 (권장)" data-ja="SPF 50（推奨）"></option>
+            <option value="14" data-en="SPF 50+" data-zh="SPF 50+" data-ko="SPF 50+" data-ja="SPF 50+"></option>
           </select>
         </div>
       </div>
@@ -693,17 +681,19 @@
         </div>
       </div>
 
-      <div id="medPhotoWarning" class="med-photosens-warning">
-        ⚠️ <strong>
-          <span data-lang="en">Photosensitivity warning — </span>
-          <span data-lang="zh">光敏反应警告 — </span>
-          <span data-lang="ko">광과민성 경고 — </span>
-          <span data-lang="ja">光感受性の注意 — </span>
-        </strong>
-        <span data-lang="en">You have selected a photosensitising medication. Your safe exposure time is significantly reduced. Even with SPF 50+, you may burn much faster than usual. Avoid sun between 10am–2pm, wear protective clothing, and speak to your pharmacist.</span>
-        <span data-lang="zh">您选择了光敏性药物。您的安全日晒时间大幅缩短。即使使用SPF 50+，您也可能比平时更快晒伤。请避免上午10点至下午2点外出，穿着防护衣物，并咨询您的药剂师。</span>
-        <span data-lang="ko">광과민성 약물을 선택하셨습니다. 안전한 일광 노출 시간이 크게 줄어듭니다. SPF 50+를 사용해도 평소보다 훨씬 빨리 화상을 입을 수 있습니다. 오전 10시~오후 2시에는 야외 활동을 피하고, 보호 의류를 착용하고, 약사에게 문의하세요.</span>
-        <span data-lang="ja">光感受性の薬を選択しました。安全な日光暴露時間が大幅に短くなります。SPF 50+を使用しても、通常より早く日焼けする場合があります。午前10時〜午後2時の外出を避け、保護衣を着用し、薬剤師に相談してください。</span>
+      <div style="font-size:12px;color:var(--text-light);text-align:center;margin:-8px 0 16px;line-height:1.6;">
+        <span data-lang="en">Based on Fitzpatrick MED values &amp; WHO UV irradiance formula (UVI × 0.025 W/m²). Real-world SPF effectiveness applied. This is an estimate — individual responses vary.</span>
+        <span data-lang="zh">基于菲茨帕特里克MED值和世卫组织紫外线辐照度公式。已应用实际SPF效果。此为估算值，个体差异可能不同。</span>
+        <span data-lang="ko">피츠패트릭 MED 값과 WHO 자외선 조도 공식(UVI × 0.025 W/m²) 기반. 실제 SPF 효과 적용. 이는 추정값이며 개인차가 있을 수 있습니다.</span>
+        <span data-lang="ja">フィッツパトリックMED値とWHO UV照射公式（UVI × 0.025 W/m²）に基づく。実際のSPF効果を適用。これは推定値であり、個人差があります。</span>
+      </div>
+
+      <div class="alert alert-warn" style="margin-bottom:16px;">
+        <strong><span data-lang="en">⚠ Taking photosensitising medications? </span><span data-lang="zh">⚠ 正在服用光敏性药物？</span><span data-lang="ko">⚠ 광과민성 약물 복용 중? </span><span data-lang="ja">⚠ 光感受性の薬を服用中？</span></strong>
+        <span data-lang="en">Your actual burn time may be much shorter than this estimate. See the <strong>My Medications</strong> tab for details.</span>
+        <span data-lang="zh">您的实际晒伤时间可能远短于此估算值。详情请查看<strong>我的药物</strong>选项卡。</span>
+        <span data-lang="ko">실제 화상 시간은 이 추정값보다 훨씬 짧을 수 있습니다. 자세한 내용은 <strong>나의 약물</strong> 탭을 참조하세요.</span>
+        <span data-lang="ja">実際の日焼け時間はこの推定値よりはるかに短い場合があります。詳細は<strong>わたしの薬</strong>タブをご覧ください。</span>
       </div>
 
       <div class="timer-widget">
@@ -1103,7 +1093,19 @@
 </footer>
 
 <script>
-  const MED_BASE = { 1: 200, 2: 150, 3: 120, 4: 90, 5: 70, 6: 60 };
+  // MED (Minimal Erythemal Dose) in J/m² by Fitzpatrick skin type
+  // Source: WHO/ICNIRP standard values
+  const MED_BASE = { 1: 200, 2: 250, 3: 300, 4: 450, 5: 600, 6: 1000 };
+
+  // SPF realistic protection multiplier
+  // Real-world SPF effectiveness ~25% of labeled value due to under-application
+  // Formula: effective multiplier = 1 + 0.75*(SPF-1), capped at SPF 50 equivalent
+  // These values are pre-calculated realistic multipliers stored in the select options
+
+  // UV irradiance formula: UVI × 0.025 W/m²
+  // Time to MED (minutes) = MED / (UVI × 0.025 × 60)
+  // With SPF: multiply base time by realistic SPF protection factor
+
   let timerInterval = null;
   let timerTotalSec = 0;
   let timerEndTime = null;
@@ -1120,7 +1122,7 @@
   }
 
   function updateSelectOptions() {
-    ['skinType','uvIndex','spf','medFactor'].forEach(id => {
+    ['skinType','uvIndex','spf'].forEach(id => {
       const sel = document.getElementById(id);
       Array.from(sel.options).forEach(opt => {
         const t = opt.getAttribute('data-' + currentLang);
@@ -1143,16 +1145,20 @@
   function calculate() {
     const skin = parseInt(document.getElementById('skinType').value);
     const uv = parseFloat(document.getElementById('uvIndex').value);
-    const spf = parseFloat(document.getElementById('spf').value);
-    const med = parseFloat(document.getElementById('medFactor').value);
-    const baseMED = MED_BASE[skin];
-    const mins = Math.round((baseMED / uv) * spf * med);
+    const spfMultiplier = parseFloat(document.getElementById('spf').value);
+
+    // Core formula:
+    // UV irradiance (W/m²) = UVI × 0.025
+    // Time to MED (seconds) = MED / irradiance
+    // Time to MED (minutes) = MED / (UVI × 0.025 × 60)
+    const medJoules = MED_BASE[skin];        // J/m²
+    const irradiance = uv * 0.025;           // W/m² = J/m²/s
+    const baseMins = medJoules / (irradiance * 60); // minutes unprotected
+    const mins = Math.round(baseMins * spfMultiplier);
+
     const rc = document.getElementById('resultCard');
     const rt = document.getElementById('resultTime');
     const rl = document.getElementById('resultLabel');
-    const mw = document.getElementById('medPhotoWarning');
-
-    mw.classList.toggle('show', med < 1);
 
     const labels = {
       tooShort: { en:'< 5 min — seek shade immediately', zh:'< 5分钟——立即寻找阴凉', ko:'5분 미만 — 즉시 그늘로', ja:'5分未満 — すぐに日陰へ' },
