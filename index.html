@@ -104,9 +104,6 @@
   .med-category{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D97706;margin-bottom:6px;}
   .med-name{font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;}
   .med-desc{font-size:13px;color:var(--text-muted);line-height:1.5;}
-  .risk-pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;}
-  .risk-high{background:#FEE2E2;color:#991B1B;}
-  .risk-mod{background:#FEF3C7;color:#92400E;}
   .reaction-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   @media(max-width:480px){.reaction-grid{grid-template-columns:1fr;}}
   .reaction-box{padding:16px;border-radius:var(--radius-sm);}
@@ -253,6 +250,7 @@
     <div class="nav-item" onclick="switchTab('protect',this)"><span>🧴</span><span data-lang="en">Protection tips</span><span data-lang="zh">防护提示</span><span data-lang="ko">보호 팁</span><span data-lang="ja">保護のヒント</span></div>
     <div class="nav-item" onclick="switchTab('sunscreens',this)"><span>🛒</span><span data-lang="en">Sunscreen products</span><span data-lang="zh">防晒产品</span><span data-lang="ko">선크림 제품</span><span data-lang="ja">日焼け止め製品</span></div>
     <div class="nav-item" onclick="switchTab('skincancer',this)"><span>🔬</span><span data-lang="en">Skin cancer signs</span><span data-lang="zh">皮肤癌征兆</span><span data-lang="ko">피부암 징후</span><span data-lang="ja">皮膚がんのサイン</span></div>
+    <div class="nav-item" onclick="switchTab('feedback',this)"><span>💬</span><span data-lang="en">Feedback</span><span data-lang="zh">反馈</span><span data-lang="ko">피드백</span><span data-lang="ja">フィードバック</span></div>
   </nav>
 </div>
 
@@ -364,14 +362,12 @@
   <div class="card">
     <div class="card-title"><span data-lang="en">Common photosensitising medications</span><span data-lang="zh">常见光敏性药物</span><span data-lang="ko">흔한 광과민성 약물</span><span data-lang="ja">一般的な光感受性の薬</span></div>
     <div class="meds-grid">
-      <div class="med-card"><div class="med-category"><span data-lang="en">Antibiotics</span><span data-lang="zh">抗生素</span><span data-lang="ko">항생제</span><span data-lang="ja">抗生物質</span></div><div class="med-name"><span data-lang="en">Tetracyclines</span><span data-lang="zh">四环素类</span><span data-lang="ko">테트라사이클린</span><span data-lang="ja">テトラサイクリン系</span><span class="risk-pill risk-high"><span data-lang="en">High</span><span data-lang="zh">高</span><span data-lang="ko">높음</span><span data-lang="ja">高</span></span></div><div class="med-desc"><span data-lang="en">Doxycycline, minocycline, tetracycline. Commonly used for acne — strongly photosensitising.</span><span data-lang="zh">强力霉素、美满霉素、四环素。常用于治疗痤疮——强光敏性。</span><span data-lang="ko">독시사이클린, 미노사이클린, 테트라사이클린. 여드름 치료에 흔히 사용 — 강한 광과민성.</span><span data-lang="ja">ドキシサイクリン、ミノサイクリン、テトラサイクリン。ニキビ治療に一般的 — 強い光感受性。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Antibiotics</span><span data-lang="zh">抗生素</span><span data-lang="ko">항생제</span><span data-lang="ja">抗生物質</span></div><div class="med-name"><span data-lang="en">Fluoroquinolones</span><span data-lang="zh">氟喹诺酮类</span><span data-lang="ko">플루오로퀴놀론</span><span data-lang="ja">フルオロキノロン系</span><span class="risk-pill risk-mod"><span data-lang="en">Moderate</span><span data-lang="zh">中等</span><span data-lang="ko">중간</span><span data-lang="ja">中程度</span></span></div><div class="med-desc"><span data-lang="en">Ciprofloxacin, norfloxacin. Avoid prolonged sun during treatment.</span><span data-lang="zh">环丙沙星、诺氟沙星。治疗期间避免长时间日晒。</span><span data-lang="ko">시프로플록사신, 노르플록사신. 치료 중 장시간 햇볕 노출 피하세요.</span><span data-lang="ja">シプロフロキサシン、ノルフロキサシン。治療中は長時間の日光を避けてください。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Blood pressure / Diuretics</span><span data-lang="zh">血压 / 利尿剂</span><span data-lang="ko">혈압 / 이뇨제</span><span data-lang="ja">血圧 / 利尿薬</span></div><div class="med-name"><span data-lang="en">Thiazide diuretics</span><span data-lang="zh">噻嗪类利尿剂</span><span data-lang="ko">티아지드 이뇨제</span><span data-lang="ja">チアジド系利尿薬</span><span class="risk-pill risk-high"><span data-lang="en">High</span><span data-lang="zh">高</span><span data-lang="ko">높음</span><span data-lang="ja">高</span></span></div><div class="med-desc"><span data-lang="en">Hydrochlorothiazide, indapamide. Very common blood pressure medication — significant photosensitivity risk.</span><span data-lang="zh">氢氯噻嗪、吲达帕胺。非常常见的降压药——显著光敏风险。</span><span data-lang="ko">하이드로클로로티아지드, 인다파미드. 매우 흔한 혈압약 — 상당한 광과민성 위험.</span><span data-lang="ja">ヒドロクロロチアジド、インダパミド。非常に一般的な血圧薬 — 著しい光感受性リスク。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Heart rhythm</span><span data-lang="zh">心律</span><span data-lang="ko">심장 리듬</span><span data-lang="ja">心臓のリズム</span></div><div class="med-name"><span data-lang="en">Amiodarone</span><span data-lang="zh">胺碘酮</span><span data-lang="ko">아미오다론</span><span data-lang="ja">アミオダロン</span><span class="risk-pill risk-high"><span data-lang="en">High</span><span data-lang="zh">高</span><span data-lang="ko">높음</span><span data-lang="ja">高</span></span></div><div class="med-desc"><span data-lang="en">Used for heart rhythm disorders. Causes phototoxicity and blue-grey skin discolouration lasting months after stopping.</span><span data-lang="zh">用于心律失常。引起光毒反应，停药后皮肤可能出现持续数月的蓝灰色变色。</span><span data-lang="ko">심장 리듬 장애에 사용. 광독성을 유발하며 복용 중단 후 수개월간 피부의 청회색 변색이 지속될 수 있습니다.</span><span data-lang="ja">心律障害に使用。光毒性を引き起こし、中止後数ヶ月間、皮膚の青灰色変色が持続する場合があります。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Mental health</span><span data-lang="zh">精神健康</span><span data-lang="ko">정신 건강</span><span data-lang="ja">精神的健康</span></div><div class="med-name"><span data-lang="en">Phenothiazines</span><span data-lang="zh">吩噻嗪类</span><span data-lang="ko">페노티아진</span><span data-lang="ja">フェノチアジン系</span><span class="risk-pill risk-high"><span data-lang="en">High</span><span data-lang="zh">高</span><span data-lang="ko">높음</span><span data-lang="ja">高</span></span></div><div class="med-desc"><span data-lang="en">Chlorpromazine, promethazine. Significant phototoxic and photoallergic reactions possible.</span><span data-lang="zh">氯丙嗪、异丙嗪。可能发生显著的光毒性和光过敏反应。</span><span data-lang="ko">클로르프로마진, 프로메타진. 상당한 광독성 및 광알레르기 반응이 가능합니다.</span><span data-lang="ja">クロルプロマジン、プロメタジン。著しい光毒性および光アレルギー反応の可能性があります。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Skin / Acne</span><span data-lang="zh">皮肤 / 痤疮</span><span data-lang="ko">피부 / 여드름</span><span data-lang="ja">皮膚 / ニキビ</span></div><div class="med-name"><span data-lang="en">Retinoids</span><span data-lang="zh">维A酸类</span><span data-lang="ko">레티노이드</span><span data-lang="ja">レチノイド</span><span class="risk-pill risk-high"><span data-lang="en">High</span><span data-lang="zh">高</span><span data-lang="ko">높음</span><span data-lang="ja">高</span></span></div><div class="med-desc"><span data-lang="en">Isotretinoin, tretinoin. Thin and sensitise the skin — daily SPF 50+ is essential throughout treatment.</span><span data-lang="zh">异维A酸、维A酸。使皮肤变薄并增加敏感性——治疗期间每日使用SPF 50+至关重要。</span><span data-lang="ko">이소트레티노인, 트레티노인. 피부를 얇고 민감하게 만듭니다 — 치료 기간 동안 매일 SPF 50+가 필수입니다.</span><span data-lang="ja">イソトレチノイン、トレチノイン。皮膚を薄くし感受性を高めます — 治療中は毎日SPF 50+が不可欠です。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Anti-inflammatory</span><span data-lang="zh">消炎药</span><span data-lang="ko">항염증제</span><span data-lang="ja">抗炎症薬</span></div><div class="med-name"><span data-lang="en">Some NSAIDs</span><span data-lang="zh">部分非甾体抗炎药</span><span data-lang="ko">일부 NSAIDs</span><span data-lang="ja">一部のNSAID</span><span class="risk-pill risk-mod"><span data-lang="en">Moderate</span><span data-lang="zh">中等</span><span data-lang="ko">중간</span><span data-lang="ja">中程度</span></span></div><div class="med-desc"><span data-lang="en">Piroxicam, ketoprofen. Particularly with topical application — photoallergic contact reactions possible.</span><span data-lang="zh">吡罗昔康、酮洛芬。特别是外用时——可能发生光过敏性接触反应。</span><span data-lang="ko">피록시캄, 케토프로펜. 특히 국소 적용 시 — 광알레르기 접촉 반응이 가능합니다.</span><span data-lang="ja">ピロキシカム、ケトプロフェン。特に外用塗布時 — 光アレルギー性接触反応の可能性があります。</span></div></div>
-      <div class="med-card"><div class="med-category"><span data-lang="en">Diabetes</span><span data-lang="zh">糖尿病</span><span data-lang="ko">당뇨</span><span data-lang="ja">糖尿病</span></div><div class="med-name"><span data-lang="en">Sulfonylureas</span><span data-lang="zh">磺脲类</span><span data-lang="ko">설포닐우레아</span><span data-lang="ja">スルホニル尿素系</span><span class="risk-pill risk-mod"><span data-lang="en">Moderate</span><span data-lang="zh">中等</span><span data-lang="ko">중간</span><span data-lang="ja">中程度</span></span></div><div class="med-desc"><span data-lang="en">Glibenclamide, glipizide. Photosensitivity reactions possible, more common at higher doses.</span><span data-lang="zh">格列本脲、格列吡嗪。可能发生光敏反应，剂量较高时更常见。</span><span data-lang="ko">글리벤클라미드, 글리피지드. 광과민성 반응 가능, 고용량에서 더 흔합니다.</span><span data-lang="ja">グリベンクラミド、グリピジド。光感受性反応の可能性、高用量でより一般的。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Antibiotics</span><span data-lang="zh">抗生素</span><span data-lang="ko">항생제</span><span data-lang="ja">抗生物質</span></div><div class="med-name"><span data-lang="en">Tetracyclines</span><span data-lang="zh">四环素类</span><span data-lang="ko">테트라사이클린</span><span data-lang="ja">テトラサイクリン系</span></div><div class="med-desc"><span data-lang="en">Doxycycline, minocycline, tetracycline. Commonly used for acne — strongly photosensitising.</span><span data-lang="zh">强力霉素、美满霉素、四环素。常用于治疗痤疮——强光敏性。</span><span data-lang="ko">독시사이클린, 미노사이클린, 테트라사이클린. 여드름 치료에 흔히 사용 — 강한 광과민성.</span><span data-lang="ja">ドキシサイクリン、ミノサイクリン、テトラサイクリン。ニキビ治療に一般的 — 強い光感受性。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Antibiotics</span><span data-lang="zh">抗生素</span><span data-lang="ko">항생제</span><span data-lang="ja">抗生物質</span></div><div class="med-name"><span data-lang="en">Fluoroquinolones</span><span data-lang="zh">氟喹诺酮类</span><span data-lang="ko">플루오로퀴놀론</span><span data-lang="ja">フルオロキノロン系</span></div><div class="med-desc"><span data-lang="en">Ciprofloxacin, norfloxacin. Avoid prolonged sun during treatment.</span><span data-lang="zh">环丙沙星、诺氟沙星。治疗期间避免长时间日晒。</span><span data-lang="ko">시프로플록사신, 노르플록사신. 치료 중 장시간 햇볕 노출 피하세요.</span><span data-lang="ja">シプロフロキサシン、ノルフロキサシン。治療中は長時間の日光を避けてください。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Blood pressure / Diuretics</span><span data-lang="zh">血压 / 利尿剂</span><span data-lang="ko">혈압 / 이뇨제</span><span data-lang="ja">血圧 / 利尿薬</span></div><div class="med-name"><span data-lang="en">Thiazide diuretics</span><span data-lang="zh">噻嗪类利尿剂</span><span data-lang="ko">티아지드 이뇨제</span><span data-lang="ja">チアジド系利尿薬</span></div><div class="med-desc"><span data-lang="en">Hydrochlorothiazide, indapamide. Very common blood pressure medication — significant photosensitivity risk.</span><span data-lang="zh">氢氯噻嗪、吲达帕胺。非常常见的降压药——显著光敏风险。</span><span data-lang="ko">하이드로클로로티아지드, 인다파미드. 매우 흔한 혈압약 — 상당한 광과민성 위험.</span><span data-lang="ja">ヒドロクロロチアジド、インダパミド。非常に一般的な血圧薬 — 著しい光感受性リスク。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Heart rhythm</span><span data-lang="zh">心律</span><span data-lang="ko">심장 리듬</span><span data-lang="ja">心臓のリズム</span></div><div class="med-name"><span data-lang="en">Amiodarone</span><span data-lang="zh">胺碘酮</span><span data-lang="ko">아미오다론</span><span data-lang="ja">アミオダロン</span></div><div class="med-desc"><span data-lang="en">Used for heart rhythm disorders. Causes phototoxicity and blue-grey skin discolouration lasting months after stopping.</span><span data-lang="zh">用于心律失常。引起光毒反应，停药后皮肤可能出现持续数月的蓝灰色变色。</span><span data-lang="ko">심장 리듬 장애에 사용. 광독성을 유발하며 복용 중단 후 수개월간 피부의 청회색 변색이 지속될 수 있습니다.</span><span data-lang="ja">心律障害に使用。光毒性を引き起こし、中止後数ヶ月間、皮膚の青灰色変色が持続する場合があります。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Mental health</span><span data-lang="zh">精神健康</span><span data-lang="ko">정신 건강</span><span data-lang="ja">精神的健康</span></div><div class="med-name"><span data-lang="en">Phenothiazines</span><span data-lang="zh">吩噻嗪类</span><span data-lang="ko">페노티아진</span><span data-lang="ja">フェノチアジン系</span></div><div class="med-desc"><span data-lang="en">Chlorpromazine, promethazine. Significant phototoxic and photoallergic reactions possible.</span><span data-lang="zh">氯丙嗪、异丙嗪。可能发生显著的光毒性和光过敏反应。</span><span data-lang="ko">클로르프로마진, 프로메타진. 상당한 광독성 및 광알레르기 반응이 가능합니다.</span><span data-lang="ja">クロルプロマジン、プロメタジン。著しい光毒性および光アレルギー反応の可能性があります。</span></div></div>
+      <div class="med-card"><div class="med-category"><span data-lang="en">Skin / Acne</span><span data-lang="zh">皮肤 / 痤疮</span><span data-lang="ko">피부 / 여드름</span><span data-lang="ja">皮膚 / ニキビ</span></div><div class="med-name"><span data-lang="en">Retinoids</span><span data-lang="zh">维A酸类</span><span data-lang="ko">레티노이드</span><span data-lang="ja">レチノイド</span></div><div class="med-desc"><span data-lang="en">Isotretinoin, tretinoin. Thin and sensitise the skin — daily SPF 50+ is essential throughout treatment.</span><span data-lang="zh">异维A酸、维A酸。使皮肤变薄并增加敏感性——治疗期间每日使用SPF 50+至关重要。</span><span data-lang="ko">이소트레티노인, 트레티노인. 피부를 얇고 민감하게 만듭니다 — 치료 기간 동안 매일 SPF 50+가 필수입니다.</span><span data-lang="ja">イソトレチノイン、トレチノイン。皮膚を薄くし感受性を高めます — 治療中は毎日SPF 50+が不可欠です。</span></div></div>
     </div>
   </div>
   <div class="card">
@@ -517,6 +513,51 @@
       <div class="source-item">📒 <div><strong>American Cancer Society</strong> — Signs and Symptoms of Melanoma Skin Cancer.<br><a href="https://www.cancer.org/cancer/types/melanoma-skin-cancer/detection-diagnosis-staging/signs-and-symptoms.html" target="_blank">cancer.org</a></div></div>
       <div class="source-item">📓 <div><strong>MoleMap Australia</strong> — Signs of Skin Cancer: ABCDEFG Guidelines.<br><a href="https://www.molemap.net.au/skin-cancer/7-signs-you-could-be-missing" target="_blank">molemap.net.au</a></div></div>
     </div>
+  </div>
+</div>
+
+<!-- ─── FEEDBACK TAB ───────────────────────────────────────────── -->
+<div id="tab-feedback" class="tab-panel">
+  <div class="section-header">
+    <h2><span data-lang="en">Share your feedback</span><span data-lang="zh">分享您的反馈</span><span data-lang="ko">피드백 공유하기</span><span data-lang="ja">フィードバックを共有する</span></h2>
+    <p><span data-lang="en">We'd love to hear your thoughts on this resource. Your feedback helps us improve sun safety information for our community.</span><span data-lang="zh">我们很乐意听取您对此资源的意见。您的反馈帮助我们为社区改善日晒安全信息。</span><span data-lang="ko">이 자료에 대한 의견을 들려주세요. 여러분의 피드백은 커뮤니티를 위한 자외선 안전 정보 개선에 도움이 됩니다.</span><span data-lang="ja">このリソースについてのご意見をお聞かせください。あなたのフィードバックは、コミュニティの日焼け安全情報の改善に役立ちます。</span></p>
+  </div>
+
+  <div class="card" style="text-align:center;padding:40px 24px;">
+    <div style="font-size:48px;margin-bottom:16px;">💬</div>
+    <div class="card-title" style="margin-bottom:8px;">
+      <span data-lang="en">Help us improve</span>
+      <span data-lang="zh">帮助我们改进</span>
+      <span data-lang="ko">개선에 도움을 주세요</span>
+      <span data-lang="ja">改善にご協力ください</span>
+    </div>
+    <p style="font-size:14px;color:var(--text-muted);max-width:440px;margin:0 auto 28px;line-height:1.7;">
+      <span data-lang="en">The form takes less than 2 minutes to complete. Your responses are anonymous and will be used solely to improve this public health resource.</span>
+      <span data-lang="zh">填写表格不超过2分钟。您的回答是匿名的，仅用于改善此公共健康资源。</span>
+      <span data-lang="ko">양식 작성에 2분도 채 걸리지 않습니다. 응답은 익명이며 이 공중 보건 자료 개선에만 사용됩니다.</span>
+      <span data-lang="ja">フォームの記入は2分もかかりません。回答は匿名であり、この公衆衛生リソースの改善のみに使用されます。</span>
+    </p>
+    <a href="https://forms.gle/HHQu8he95yre3abJ8" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--sun);color:#78350F;font-family:inherit;font-size:15px;font-weight:600;border-radius:100px;text-decoration:none;box-shadow:0 2px 8px rgba(245,158,11,.3);transition:all .2s;" onmouseover="this.style.background='#FBBF24';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='var(--sun)';this.style.transform='none'">
+      <span>📋</span>
+      <span data-lang="en">Open feedback form</span>
+      <span data-lang="zh">打开反馈表格</span>
+      <span data-lang="ko">피드백 양식 열기</span>
+      <span data-lang="ja">フィードバックフォームを開く</span>
+    </a>
+    <p style="font-size:12px;color:var(--text-light);margin-top:20px;">
+      <span data-lang="en">Opens in a new tab · Powered by Google Forms</span>
+      <span data-lang="zh">在新标签页中打开 · 由 Google 表单提供支持</span>
+      <span data-lang="ko">새 탭에서 열림 · Google Forms 제공</span>
+      <span data-lang="ja">新しいタブで開きます · Google フォーム使用</span>
+    </p>
+  </div>
+
+  <div class="alert alert-success">
+    <strong><span data-lang="en">Thank you for taking the time — </span><span data-lang="zh">感谢您抽出时间 — </span><span data-lang="ko">시간을 내주셔서 감사합니다 — </span><span data-lang="ja">お時間をいただきありがとうございます — </span></strong>
+    <span data-lang="en">This resource was developed as part of a pharmacy intern Public Health Initiative at Sydney Olympic Park Community Pharmacy. Your input directly shapes how we support our community.</span>
+    <span data-lang="zh">此资源是作为悉尼奥林匹克公园社区药房药学实习生公共健康倡议的一部分开发的。您的意见直接影响我们支持社区的方式。</span>
+    <span data-lang="ko">이 자료는 시드니 올림픽 파크 커뮤니티 약국에서 약학 인턴 공중 보건 이니셔티브의 일환으로 개발되었습니다. 여러분의 의견이 커뮤니티 지원 방식에 직접적인 영향을 미칩니다.</span>
+    <span data-lang="ja">このリソースは、シドニーオリンピックパーク コミュニティ薬局の薬局インターン公衆衛生イニシアチブの一環として開発されました。あなたの意見がコミュニティへのサポート方法を直接形作ります。</span>
   </div>
 </div>
 
